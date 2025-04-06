@@ -7,20 +7,7 @@
     <div class="absolute -bottom-20 -left-20 w-40 h-40 rounded-full bg-amber-500 opacity-10 blur-2xl"></div>
     
     <div class="container mx-auto px-6 relative z-10">
-        <!-- Call to Action -->
-        <div class="text-center pb-12 border-b border-amber-700/50 max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold font-playfair mb-6 text-white" data-aos="fade-up">
-                {{ __('messages.provider_call') }}
-            </h2>
-            <p class="text-lg mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                {{ __('messages.provider_sub') }}
-            </p>
-            <a href="#" class="inline-block bg-gradient-to-r from-teal-500 to-teal-400 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-teal-400 hover:to-teal-500 
-                    transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 hover:translate-y-px"
-                data-aos="fade-up" data-aos-delay="400">
-                {{ __('messages.join_us') }}
-            </a>
-        </div>
+       
         
         <!-- Main Content -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left mt-12">
@@ -181,7 +168,7 @@
         
         <!-- Copyright -->
         <div class="text-center text-sm text-amber-200/70 flex flex-col md:flex-row justify-between items-center">
-            <p>© {{ now()->year }} Mer7babik. {{ __('messages.rights_reserved') }}</p>
+            <p>© {{ now()->year }} App. {{ __('messages.rights_reserved') }}</p>
             <div class="mt-4 md:mt-0 flex space-x-4">
                 <a href="#" class="hover:text-teal-400 transition duration-300">{{ __('messages.privacy') }}</a>
                 <span class="text-amber-700">•</span>
