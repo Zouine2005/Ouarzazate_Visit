@@ -18,5 +18,22 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        $this->call([
+            //les catégories
+             AttractionCategorySeeder::class,
+             CircuitCategorySeeder::class,
+             CommissariatsCategorySeeder::class,
+             GuidesCategorySeeder::class,
+             HebergementCategorySeeder::class,
+             HôpitauxCategorySeeder::class,
+             PharmaciesCategorySeeder::class,
+             RestaurantsCategorySeeder::class,
+             ShoppingCategorySeeder::class,
+             SupermarchésCategorySeeder::class,
+             TransportsCategorySeeder::class,
+             // services des attractions
+             AttractionServiceSeeder::class,
+        ]);
+        
     }
 }
