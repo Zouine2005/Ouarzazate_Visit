@@ -8,4 +8,28 @@ use Illuminate\Database\Eloquent\Model;
 class Service extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'category_id',
+        'name',
+        'description',
+        'image',
+        'latitude',
+        'longitude',
+        'address',
+        'phone',
+        'website',
+        'is_approved',
+    ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

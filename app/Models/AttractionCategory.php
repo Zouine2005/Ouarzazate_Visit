@@ -5,13 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class AttractionCategory extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'image'];
 
+    // Relation avec AttractionService
     public function services()
     {
-        return $this->hasMany(Service::class);
+        return $this->hasMany(AttractionService::class, 'category_id');
     }
+
 }
