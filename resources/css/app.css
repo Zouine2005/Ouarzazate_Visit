@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* autoloader*/
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid transparent; /* Remplace #0000 */
+    border-radius: 50%;
+    border-color: #d4a017 transparent; /* Jaune doré sableux pour le cercle extérieur */
+    animation: l16 1s infinite linear;
+  }
+  .loader::before,
+  .loader::after {    
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+  }
+  .loader::before {
+    border-color: #e07b39 transparent; /* Orange brûlé pour un effet soleil saharien */
+    animation: inherit; 
+    animation-duration: .5s;
+    animation-direction: reverse;
+  }
+  .loader::after {
+    margin: 8px;
+    border-color: #8c5523 transparent; /* Brun terre pour la profondeur */
+  }
+  @keyframes l16 { 
+    100% { transform: rotate(1turn) }
+  }
