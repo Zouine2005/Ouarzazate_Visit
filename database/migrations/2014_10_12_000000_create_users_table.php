@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->enum('role', ['tourist', 'provider', 'admin'])->default('tourist');
+            $table->enum('role', ['tourist', 'provider'])->default('tourist');
             $table->boolean('is_verified')->default(false);
             $table->timestamps();
         });
