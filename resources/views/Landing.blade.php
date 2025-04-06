@@ -5,7 +5,7 @@
 <section class="relative bg-amber-200 py-24 bg-cover bg-center overflow-hidden">
     <!-- Video Background -->
     <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover">
-        <source src="{{ asset('vedios/hero.mp4') }}" type="video/mp4">
+        <source src="{{ asset('videos/hero.mp4') }}" type="video/mp4">
         Votre navigateur ne supporte pas les vidéos HTML5.
     </video>
 
