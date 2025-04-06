@@ -157,15 +157,19 @@ h1 {
                 <div class="card attraction-card animate__fadeInUp" 
                      data-name="{{ $service->{'name_' . app()->getLocale()} }}" 
                      data-rating="{{ $service->rating }}"  
-                     data-localization="{{ $service->latitude }},{{ $service->longitude }}">
-                    <img src="{{ asset($service->photo) }}" class="card-img-top" alt="{{ $service->{'name_' . app()->getLocale()} }}">
+                     data-localization="{{ $service->latitude }},{{ $service->longitude }}">   
+                    @php
+                        $photos = is_string($service->photos) ? json_decode($service->photos, true) : $service->photos;
+                        $firstPhoto = !empty($photos) ? $photos[0] : 'default-image.jpg'; // Met une image par défaut si vide
+                    @endphp
+                    <img src="{{ asset($firstPhoto) }}" class="card-img-top" alt="{{ $service->{'name_' . app()->getLocale()} }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ $service->{'name_' . app()->getLocale()} }}</h5>
                         <p><strong>{{ __('messages.Adresse') }} :</strong> {{ $service->address }}</p>
                         <p><strong>{{ __('messages.Note') }} :</strong> ⭐{{ $service->rating }}</p>
-                        @if($service->video)
-                            <a href="{{ $service->video }}" target="_blank" class="btn btn-primary">{{ __('messages.Cliquez pour découvrir') }}</a>
-                        @endif
+                       
+                            <a href="{{ route('category.service', ['id' => $category->id, 'serviceId' => $service->id]) }}" target="_blank" class="btn btn-primary" style="background-color: #963D19; border-color: #963D19;">{{ __('messages.Cliquez pour découvrir') }}</a>
+                        
                     </div>
                 </div>
             @endforeach
