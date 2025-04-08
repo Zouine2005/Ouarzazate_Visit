@@ -2,7 +2,7 @@
 <nav class="bg-amber-100 shadow-md p-4 sticky top-0 z-20">
     <div class="container mx-auto flex justify-between items-center">
         <!-- Logo -->
-        <a href="/" class="text-2xl font-bold text-amber-800 font-playfair">App</a>
+        <a href="/" class="text-2xl font-bold text-amber-800 font-playfair">Mer7babik</a>
 
         <!-- Desktop Links -->
         <div class="hidden md:flex items-center space-x-6">
